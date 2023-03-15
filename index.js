@@ -91,4 +91,18 @@ for(let i=0;i<items.length;i++){
   }
 }
 
+var parent=document.getElementsByClassName("list-group-item").parentElement;
+console.log(parent);
+
+console.log(document.lastElementChild);
+console.log(document.lastChild);
+console.log(document.firstElementChild);
+console.log(document.firstChild);
+console.log(document.firstElementChild.firstElementChild.nextSibling);
+console.log(document.firstElementChild.firstElementChild.nextElementSibling);
+
+const node = document.createElement("li");
+const textnode = document.createTextNode("Water");
+node.appendChild(textnode);
+document.getElementById("items").appendChild(node);
 
