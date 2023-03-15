@@ -37,7 +37,7 @@ var header=document.querySelector('#main-header');
 header.style.borderBottom="solid 4px black";
 
 
-Make the 3 rd element in the list have green background color
+// Make the 3 rd element in the list have green background color
 var items= document.getElementsByTagName('li');
 items[2].style.background='green';
 
@@ -52,7 +52,7 @@ for(let i=0;i<items.length;i++){
 var item5=document.getElementsByClassName('item-5');
 console.log(item5);
 
-And try editing it with getelementsbyclassname
+// And try editing it with getelementsbyclassname
 
 var item5=document.getElementsByClassName('item-5');
 console.log(item5);
@@ -60,10 +60,35 @@ item5[0].style.background='green';
 item5[0].style.color='pink';
 item5[0].style.fontWeight='bolder';
 
-and then by getelementbytagname
+// and then by getelementbytagname
 
 var item5=document.getElementsByTagName('li');
 console.log(item5[4]);
 item5[4].style.background='green';
 item5[4].style.color='pink';
 item5[4].style.fontWeight='bolder';
+
+// Make the 2nd item have green background color
+var item2=document.getElementsByClassName('list-group-item')[1];
+console.log(item2);
+item2.style.background='green';
+
+// Make the 3rd item invisible
+var item3=document.getElementsByClassName('list-group-item')[2];
+console.log(item3);
+item3.style.visibility='hidden';
+
+// Using QuerySelectorALL change the font color to green for 2nd item in the item list
+var item2=document.querySelectorAll('li')[1];
+console.log(item2);
+item2.style.background='green';
+
+// Choose all the odd elements and make their background green using QuerySelectorALL﻿
+var items=document.querySelectorAll('li');
+for(let i=0;i<items.length;i++){
+  if(i%2==0){
+    items[i].style.background='green';
+  }
+}
+
+
